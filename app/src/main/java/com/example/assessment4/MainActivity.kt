@@ -13,7 +13,7 @@ import com.example.assessment4.model.PostAdapter
 import com.example.assessment4.viewmodel.PostViewModel
 
 class MainActivity : AppCompatActivity() {
-    val postViewModel : PostViewModel by ViewModel()
+    val postViewModel : PostViewModel by viewModels()
     lateinit var binding:ActivityMainBinding
     lateinit var  postAdapter: PostAdapter
     var postList:List<Post> = emptyList()
@@ -42,4 +42,5 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(baseContext, error, Toast.LENGTH_LONG)
                 .show()
         })
+
     }}
